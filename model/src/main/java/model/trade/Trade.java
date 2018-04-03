@@ -5,7 +5,7 @@ import java.util.Date;
 
 import model.OpasObject;
 import model.book.Book;
-import model.counterparty.Counterparty;
+import model.party.Counterparty;
 import model.product.Product;
 
 public class Trade extends OpasObject implements Serializable {
@@ -21,6 +21,11 @@ public class Trade extends OpasObject implements Serializable {
 	private Date valueDate;
 	private Date captureDate;
 	private String status;
+	private Counterparty counterparty;
+	private Book book;
+	private String channel;
+	private long borkerId;
+	private long dealerId;
 
 	public String getStatus() {
 		return status;
@@ -29,14 +34,6 @@ public class Trade extends OpasObject implements Serializable {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-
-	private Counterparty counterparty;
-
-	private Book book;
-
-	private String channel;
-	private long borkerId;
-	private long dealerId;
 
 	public String getSourceSystemTradeId() {
 		return sourceSystemTradeId;

@@ -3,7 +3,7 @@ package model.book;
 import java.io.Serializable;
 
 import model.OpasObject;
-import model.organization.Organization;
+import model.party.Organization;
 
 public class Book extends OpasObject implements Serializable {
 
